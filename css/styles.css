@@ -1,0 +1,259 @@
+:root {
+  --main-color: #212121;
+  --active-color: #2196F3;
+  --second-color: #757575;
+  --button-color: #f5f4fa;
+  --main-white-color: #ffffff;
+  --hero-background: #2F303A;
+  --main-background: #F5F5F5;
+  --main-font: 'Roboto', sans-serif;
+  --second-font: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--main-color);
+  background-color: var(--main-white-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.text {
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
+.button {
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 4px;
+  border: transparent;
+}
+
+/* header styles */
+/* logo comment */
+.logo {
+  font-family: var(--second-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.site-nav,
+.contact {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link {
+  color: var(--main-color);
+}
+
+.contact {
+  color: var(--second-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contact .link:hover,
+.contact .link:focus,
+.footer-style .link:hover,
+.footer-style .link:focus {
+  color: var(--active-color);
+}
+
+.site-nav .link:active,
+.contact .link:active {
+  color: var(--active-color);
+}
+
+.site-nav .link.current {
+  color: var(--active-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* main styles */
+
+/* hero styles */
+.hero {
+  background: var(--hero-background);
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+}
+
+.preliminary-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--main-white-color);
+  background-color: var(--active-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.preliminary-btn:hover,
+.preliminary-btn:focus {
+  background-color: #188CE8;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--main-white-color);
+  background: var(--active-color);
+}
+
+/* specialty styles */
+.specialty .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.specialty .text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* our business styles */
+
+/* out team styles */
+.team {
+  letter-spacing: 0.03em;
+  text-align: center;
+  background: var(--button-color);
+}
+
+.team .item {
+  background: var(--main-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.team .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team .text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+/* projects-styles */
+
+.filter-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+  background: var(--button-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.projects {
+  background-color: var(--main-white-color);
+}
+
+.projects .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.projects .text {
+  font-size: 16px;
+  line-height: 1.875;
+}
+
+/* .projects .item {
+  background: var(--main-white-color);
+  border: 1px solid #EEEEEE;
+} */
+
+/* footer styles */
+.footer-style {
+  background: #2F303A;
+}
+
+.logo-web {
+  color: var(--active-color);
+}
+
+.logo-studio-header {
+  color: #000000;
+}
+
+.logo-studio-footer {
+  color: var(--main-white-color);
+}
+
+address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.address-list .location {
+  color: var(--main-white-color);
+}
+
+/* a[href*="goo.gl"] {
+  color: var(--main-white-color);
+} */
+
+/* a[href*="goo.gl"]:hover,
+a[href*="goo.gl"]:focus {
+  color: var(--active-color);
+} */
+
+.address-style {
+  color: rgba(255, 255, 255, 0.6);
+}
