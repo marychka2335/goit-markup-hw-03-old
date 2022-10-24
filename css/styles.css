@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box;
+}
+
 :root {
   --main-color: #212121;
   --active-color: #2196F3;
@@ -10,6 +14,11 @@
   --second-font: 'Raleway', sans-serif;
 }
 
+* ::after,
+::before {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--main-color);
@@ -18,6 +27,24 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -45,14 +72,46 @@ a {
   border: transparent;
 }
 
+.container {
+  width: 1200 px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 /* header styles */
 /* logo comment */
+
+.header-container {
+  display: flex;
+  border-bottom: 1px solid #ECECEC;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* .header-style {
+  justify-contact: baseline;
+} */
+
+.contact-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-family: var(--second-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+.header-logo {
+  margin-right: 93px;
+  padding: 32px 0;
+  align-items: center;
 }
 
 .site-nav,
@@ -63,13 +122,39 @@ a {
   letter-spacing: 0.02em;
 }
 
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
   color: var(--main-color);
 }
 
+.header-nav-link {
+  display: block;
+  padding: 32px 0;
+}
+
 .contact {
   color: var(--second-color);
+  display: flex;
 }
+
+.contact-container {
+  margin-left: auto;
+}
+
+.contact .contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-item-link {
+  padding: 32px 0;
+}
+
+/* .contact .mail {
+  padding: 32px 0;
+} */
 
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -89,6 +174,10 @@ a {
   color: var(--active-color);
 }
 
+.site-nav {
+  display: flex;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -103,6 +192,9 @@ a {
 }
 
 /* main styles */
+.section {
+  padding-bottom: 94px;
+}
 
 /* hero styles */
 .hero {
@@ -119,6 +211,22 @@ h1 {
   color: var(--main-white-color);
 }
 
+.hero-container {
+  /* width: 1170px; */
+  height: 600px;
+  /* padding-bottom: 200px; */
+}
+
+.hero-sign {
+  padding-top: 200px;
+  padding-left: 0;
+  margin-bottom: 40px;
+  /* align-items: center; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
+}
+
 .preliminary-btn {
   font-weight: 700;
   font-size: 16px;
@@ -127,6 +235,13 @@ h1 {
   color: var(--main-white-color);
   background-color: var(--active-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  display: block;
+  padding: 10px 32px;
+  /* justify-content: center; */
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
 .preliminary-btn:hover,
@@ -141,12 +256,28 @@ h1 {
 }
 
 /* specialty styles */
+
+.specialty {
+  padding-top: 94px;
+}
+
+.specialty-container {
+  display: flex;
+}
+
+.specialty .container {
+  /* padding-left: 0;
+  padding-right: 0; */
+
+}
+
 .specialty .title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .specialty .text {
@@ -154,13 +285,42 @@ h1 {
   line-height: 1.71;
 }
 
+.specialty-item:not(:last-child) {
+  margin-right: 30px;
+  /* width: 270px;
+  position: relative;
+  flex-basis: calc((100% - 8px * 3) / 4); */
+}
+
 /* our business styles */
+.business-list {
+  display: flex;
+}
+
+.business .section-title {
+  margin-bottom: 50px;
+}
+
+.business .item:not(:last-child) {
+  gap: calc((100% - 30px * 2) / 3);
+}
 
 /* out team styles */
 .team {
   letter-spacing: 0.03em;
   text-align: center;
   background: var(--button-color);
+}
+
+.team .section-title {
+  margin-bottom: 50px;
+  padding-top: 94px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc((100% - 30px * 3) / 4);
 }
 
 .team .item {
@@ -176,15 +336,36 @@ h1 {
   line-height: 1.1875;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .team .text {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 /* projects-styles */
+.project-section {
+  padding-bottom: 34px;
+}
+
+/* .projects-container {
+  padding-bottom: 38px;
+} */
+
+.groups-container {
+  display: flex;
+  margin-top: 150px;
+  margin-bottom: 34px;
+  justify-content: center;
+}
+
+.groups-container .projects-filter {
+  display: flex;
+}
 
 .filter-btn {
   font-weight: 500;
@@ -194,10 +375,13 @@ h1 {
   color: var(--main-color);
   background: var(--button-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  height: 38px;
+  width: 130px;
 }
 
-.projects {
-  background-color: var(--main-white-color);
+.filter-item:not(:last-child) {
+  /* margin-bottom: 50px; */
+  margin-right: 8px;
 }
 
 .projects .title {
@@ -205,21 +389,64 @@ h1 {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 
 .projects .text {
   font-size: 16px;
   line-height: 1.875;
+  padding-bottom: 20px;
 }
 
 /* .projects .item {
   background: var(--main-white-color);
   border: 1px solid #EEEEEE;
 } */
+/* .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: calc((100% - 30px * 8) / 9);
+} */
+
+.projects {
+  background-color: var(--main-white-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: calc((100% - 30px * 8) / 9);
+}
+
+.project-description {
+  border: 1px #EEEEEE;
+  border-bottom: none;
+  padding-left: 24px;
+  padding-right: 24px;
+
+}
+
+.item {
+  border: 1px solid #EEEEEE;
+}
+
+.item:not(:last-child) {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
 
 /* footer styles */
 .footer-style {
   background: #2F303A;
+}
+
+.logo-footer-style {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.footer-style .address {
+  padding-bottom: 60px;
 }
 
 .logo-web {
@@ -239,6 +466,7 @@ address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  /* padding: 0; */
 }
 
 .address-list .location {
@@ -256,4 +484,9 @@ a[href*="goo.gl"]:focus {
 
 .address-style {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-item:not(:last-child) {
+  padding-bottom: 9px;
+  /* margin-bottom: 9px; */
 }
